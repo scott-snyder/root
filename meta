@@ -1,12 +1,11 @@
 Version: 1
-Previous: 247ddd94c470bf79fa5e69363c32e15420fefcb9
-Head: b66696b7447f21cd17ef0bca4f8a3755202e9f8e
+Previous: 9a21b39505d3e8ca1132a74f85dfd5c244dcc113
+Head: 4fd4e6cbcb64cb5e5c2c299333f1d6f095258317
 Applied:
   no-roofit-banner: e0519913a52c30415c51d13bfb42389a7150654d
   docfix: e7b57e8c25058060e489b07498c9fa3e5b46e118
   gcc9: 295e1e7c2262d5a03c1ca7c5c31855bbd2c01498
   warn: 96517909654f14f89aa6c0da2e4a86b43aec9ea9
-  gitignore: 7f08fe3dbf1f7e687f3750ae985321a76e83acdc
-  refresh-temp: b66696b7447f21cd17ef0bca4f8a3755202e9f8e
+  gitignore: 4fd4e6cbcb64cb5e5c2c299333f1d6f095258317
 Unapplied:
 Hidden:
