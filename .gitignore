@@ -36,3 +36,5 @@ CMakeLists.txt.user
 tags
 *.d
 .cache
+*~
+.ccls-cache
