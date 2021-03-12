@@ -1,6 +1,7 @@
 Version: 1
-Previous: None
-Head: 46db25e518e17a4e8619bbf0ad1c0533e28e6882
+Previous: 64ffdef422496675ecbe053f5f3129f4b9f4cd70
+Head: f8f10501f4bb6cb0e49efaf904fd45b309462f7f
 Applied:
+  no-roofit-banner: f8f10501f4bb6cb0e49efaf904fd45b309462f7f
 Unapplied:
 Hidden:
