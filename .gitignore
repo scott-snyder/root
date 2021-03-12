@@ -43,3 +43,7 @@ compile_commands.json
 documentation/doxygen/*.eps
 documentation/doxygen/*.pcm
 documentation/doxygen/*.jpg
+
+*~
+.ccls-cache
+
