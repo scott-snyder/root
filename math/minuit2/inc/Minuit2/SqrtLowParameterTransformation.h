@@ -3,7 +3,7 @@
 
 /**********************************************************************
  *                                                                    *
- * Copyright (c) 2005 LCG ROOT Math team,  CERN/PH-SFT                *
+ * Copyright (c) 2005, 2018 LCG ROOT Math team,  CERN/PH-SFT                *
  *                                                                    *
  **********************************************************************/
 
@@ -35,7 +35,7 @@ public:
 
   SqrtLowParameterTransformation() {}
 
-  ~SqrtLowParameterTransformation() {}
+  ~SqrtLowParameterTransformation() = default;
 
   // transformation from internal to external
   double Int2ext(double Value, double Lower) const;

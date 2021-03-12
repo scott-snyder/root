@@ -2,7 +2,7 @@
 // Author: Peter Malzacher   31/08/99
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2018, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -32,7 +32,7 @@ private:
 
 public:
    TRandom3(UInt_t seed=4357);
-   virtual ~TRandom3();
+   virtual ~TRandom3() = default;
    // get the current seed (only first element of the seed table)
    virtual  UInt_t    GetSeed() const { return fMt[0];}
    using TRandom::Rndm;

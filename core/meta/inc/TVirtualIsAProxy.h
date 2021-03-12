@@ -29,6 +29,8 @@ public:
    virtual ~TVirtualIsAProxy() { }
    virtual void SetClass(TClass *cl) = 0;
    virtual TClass* operator()(const void *obj) = 0;
+
+   TVirtualIsAProxy& operator=(const TVirtualIsAProxy&) = default;
 };
 
 #endif // ROOT_TVirtualIsAProxy

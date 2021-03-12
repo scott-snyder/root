@@ -2,7 +2,7 @@
 // Author: Pasha Murat   12/02/99
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2018, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -33,7 +33,8 @@ public:
    TVector2 ();
    TVector2 (Double_t *s);
    TVector2 (Double_t x0, Double_t y0);
-   virtual ~TVector2();
+   TVector2 (const TVector2&) = default;
+   virtual ~TVector2() = default;
                                         // ****** unary operators
 
    TVector2&       operator  = (TVector2 const & v);

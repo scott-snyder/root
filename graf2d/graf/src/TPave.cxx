@@ -2,7 +2,7 @@
 // Author: Rene Brun   16/10/95
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2018, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -122,6 +122,27 @@ TPave::TPave(const TPave &pave) : TBox(pave)
 
    pave.TPave::Copy(*this);
 }
+
+#if 0
+TPave& TPave::operator=(const TPave &pave)
+{
+  if (this != &pave) {
+    TBox::operator= (pave);
+     // ???
+    fX1NDC        = 0.;
+    fY1NDC        = 0.;
+    fX2NDC        = 0.;
+    fY2NDC        = 0.;
+    fCornerRadius = 0.;
+    fBorderSize   = 0;
+    fInit         = 0;
+    fShadowColor  = 0;
+
+    ((TPave&)pave).TPave::Copy(*this);
+  }
+  return *this;
+}
+#endif
 
 ////////////////////////////////////////////////////////////////////////////////
 /// Assignment operator

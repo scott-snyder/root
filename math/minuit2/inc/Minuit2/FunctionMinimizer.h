@@ -3,7 +3,7 @@
 
 /**********************************************************************
  *                                                                    *
- * Copyright (c) 2005 LCG ROOT Math team,  CERN/PH-SFT                *
+ * Copyright (c) 2005, 2018 LCG ROOT Math team,  CERN/PH-SFT                *
  *                                                                    *
  **********************************************************************/
 
@@ -37,7 +37,7 @@ class FunctionMinimizer {
 
 public:
 
-   virtual ~FunctionMinimizer() {}
+   virtual ~FunctionMinimizer() = default;
 
    //starting values for parameters and errors
    virtual FunctionMinimum Minimize(const FCNBase&, const std::vector<double>& par, const std::vector<double>& err, unsigned int strategy, unsigned int maxfcn, double toler) const = 0;

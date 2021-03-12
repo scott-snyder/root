@@ -3,7 +3,7 @@
 
 /**********************************************************************
  *                                                                    *
- * Copyright (c) 2005 LCG ROOT Math team,  CERN/PH-SFT                *
+ * Copyright (c) 2005, 2018 LCG ROOT Math team,  CERN/PH-SFT                *
  *                                                                    *
  **********************************************************************/
 
@@ -32,7 +32,7 @@ public:
 
   MnGlobalCorrelationCoeff(const MnAlgebraicSymMatrix&);
 
-  ~MnGlobalCorrelationCoeff() {}
+  ~MnGlobalCorrelationCoeff() = default;
 
   const std::vector<double>& GlobalCC() const {return fGlobalCC;}
 

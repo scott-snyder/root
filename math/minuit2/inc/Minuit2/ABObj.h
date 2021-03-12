@@ -3,7 +3,7 @@
 
 /**********************************************************************
  *                                                                    *
- * Copyright (c) 2005 LCG ROOT Math team,  CERN/PH-SFT                *
+ * Copyright (c) 2005, 2018 LCG ROOT Math team,  CERN/PH-SFT                *
  *                                                                    *
  **********************************************************************/
 
@@ -42,7 +42,7 @@ public:
 
   ABObj(const M& obj, T factor) : fObject(obj), fFactor(factor) {}
 
-  ~ABObj() {}
+  ~ABObj() = default;
 
   ABObj(const ABObj& obj) :
     fObject(obj.fObject), fFactor(obj.fFactor) {}
@@ -78,7 +78,7 @@ public:
 
   ABObj(const LAVector& obj, double factor) : fObject(obj), fFactor(factor) {}
 
-  ~ABObj() {}
+  ~ABObj() = default;
 
   // remove copy constructure to Fix a problem in AIX
   // should be able to use the compiler generated one
@@ -116,7 +116,7 @@ public:
 
   ABObj(const LASymMatrix& obj, double factor) : fObject(obj), fFactor(factor) {}
 
-  ~ABObj() {}
+  ~ABObj() = default;
 
   ABObj(const ABObj& obj) :
     fObject(obj.fObject), fFactor(obj.fFactor) {}

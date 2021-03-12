@@ -2,7 +2,7 @@
 // Author: Rene Brun   15/12/95
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2018, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -31,6 +31,8 @@ protected:
 
 public:
    TRandom(UInt_t seed=65539);
+   TRandom(const TRandom&) = default;
+   TRandom& operator=(const TRandom&) = default;
    virtual ~TRandom();
    virtual  Int_t    Binomial(Int_t ntot, Double_t prob);
    virtual  Double_t BreitWigner(Double_t mean=0, Double_t gamma=1);
