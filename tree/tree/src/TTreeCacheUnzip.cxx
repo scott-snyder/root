@@ -3,7 +3,7 @@
 //          Fabrizio Furano (CERN) Aug 2009
 
 /*************************************************************************
- * Copyright (C) 1995-2018, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2020, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -32,6 +32,13 @@ A TTreeCache which exploits parallelized decompression of its own content.
 #include "ROOT/TThreadExecutor.hxx"
 #include "ROOT/TTaskGroup.hxx"
 #endif
+
+void TGUniquePtr1::reset (ROOT::Experimental::TTaskGroup* p)
+{
+  delete m_ptr;
+  m_ptr = p;
+}
+  
 
 extern "C" void R__unzip(Int_t *nin, UChar_t *bufin, Int_t *lout, char *bufout, Int_t *nout);
 extern "C" int R__unzip_header(Int_t *nin, UChar_t *bufin, Int_t *lout);

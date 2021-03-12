@@ -32,6 +32,18 @@ class TTaskGroup;
 }
 #endif
 
+struct TGUniquePtr1
+{
+  ~TGUniquePtr1() { reset(); }
+  ROOT::Experimental::TTaskGroup* operator->() const
+  {
+    return m_ptr;
+  }
+  operator bool() const { return m_ptr != nullptr; }
+  void reset (ROOT::Experimental::TTaskGroup* p = nullptr);
+  ROOT::Experimental::TTaskGroup* m_ptr = nullptr;
+};
+
 class TTreeCacheUnzip : public TTreeCache {
 
 public:
@@ -89,7 +101,7 @@ protected:
 
    // IMT TTaskGroup Manager
 #ifdef R__USE_IMT
-   std::unique_ptr<ROOT::Experimental::TTaskGroup> fUnzipTaskGroup;
+   TGUniquePtr1 fUnzipTaskGroup;
 #endif
 
    // Unzipping related members
