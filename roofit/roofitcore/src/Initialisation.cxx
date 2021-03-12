@@ -15,7 +15,7 @@ namespace {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Print RooFit banner.
 void doBanner() {
-#ifndef __ROOFIT_NOBANNER
+#if 0//ndef __ROOFIT_NOBANNER
   if (gEnv->GetValue("RooFit.Banner", 1) == 0)
     return;
 
@@ -24,7 +24,7 @@ void doBanner() {
 
   std::cout << '\n'
       << "\033[1mRooFit v" << VTAG << " -- Developed by Wouter Verkerke and David Kirkby\033[0m " << '\n'
-      << "                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University" << '\n'
+      << "                Copyright (C) 2000-2021 NIKHEF, University of California & Stanford University" << '\n'
       << "                All rights reserved, please read http://roofit.sourceforge.net/license.txt" << '\n'
       << std::endl;
 #endif
