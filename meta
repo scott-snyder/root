@@ -1,9 +1,8 @@
 Version: 1
-Previous: 2a8aafb5e2be23cd2eebbff8b2af1d8f6f0bb1ae
-Head: 9001c940aa6463dc9efa95396b4bf9d18f038bd4
+Previous: e1d36ce1db1754efd6a7b710dea5ff65ece0e51d
+Head: e7b57e8c25058060e489b07498c9fa3e5b46e118
 Applied:
   no-roofit-banner: e0519913a52c30415c51d13bfb42389a7150654d
-  docfix: b2ab25dd3ebff1d133a045f3aeb09c6ffdc00675
-  refresh-temp: 9001c940aa6463dc9efa95396b4bf9d18f038bd4
+  docfix: e7b57e8c25058060e489b07498c9fa3e5b46e118
 Unapplied:
 Hidden:
