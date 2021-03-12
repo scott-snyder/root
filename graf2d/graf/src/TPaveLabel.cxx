@@ -2,7 +2,7 @@
 // Author: Rene Brun   17/10/95
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2018, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -47,13 +47,6 @@ TPaveLabel::TPaveLabel(Double_t x1, Double_t y1,Double_t x2, Double_t  y2, const
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-/// Pavelabel default destructor.
-
-TPaveLabel::~TPaveLabel()
-{
-}
-
-////////////////////////////////////////////////////////////////////////////////
 /// Pavelabel copy constructor.
 
 TPaveLabel::TPaveLabel(const TPaveLabel &pavelabel) : TPave(pavelabel), TAttText(pavelabel)
@@ -69,6 +62,16 @@ void TPaveLabel::Copy(TObject &obj) const
    TPave::Copy(obj);
    TAttText::Copy(((TPaveLabel&)obj));
    ((TPaveLabel&)obj).fLabel      = fLabel;
+}
+
+TPaveLabel& TPaveLabel::operator=(const TPaveLabel &pavelabel)
+{
+  if (this != &pavelabel) {
+    TPave::operator= (pavelabel);
+    TAttText::operator= (pavelabel);
+    ((TPaveLabel&)pavelabel).Copy(*this);
+  }
+  return *this;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

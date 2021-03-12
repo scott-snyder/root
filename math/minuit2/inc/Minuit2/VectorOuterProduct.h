@@ -3,7 +3,7 @@
 
 /**********************************************************************
  *                                                                    *
- * Copyright (c) 2005 LCG ROOT Math team,  CERN/PH-SFT                *
+ * Copyright (c) 2005, 2018 LCG ROOT Math team,  CERN/PH-SFT                *
  *                                                                    *
  **********************************************************************/
 
@@ -25,7 +25,7 @@ public:
 
   VectorOuterProduct(const M& obj) : fObject(obj) {}
 
-  ~VectorOuterProduct() {}
+  ~VectorOuterProduct() = default;
 
   typedef sym Type;
 

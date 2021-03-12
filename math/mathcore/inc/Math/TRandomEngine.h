@@ -3,7 +3,7 @@
 
 /**********************************************************************
  *                                                                    *
- * Copyright (c) 2015  LCG ROOT Math Team, CERN/PH-SFT                *
+ * Copyright (c) 2015, 2018  LCG ROOT Math Team, CERN/PH-SFT                *
  *                                                                    *
  *                                                                    *
  **********************************************************************/
@@ -19,7 +19,7 @@ namespace ROOT {
       class TRandomEngine  {
       public:
          virtual double Rndm() = 0;
-         virtual ~TRandomEngine() {}
+         virtual ~TRandomEngine() = default;
       };
       
    } // end namespace Math

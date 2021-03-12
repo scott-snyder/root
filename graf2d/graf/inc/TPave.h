@@ -2,7 +2,7 @@
 // Author: Rene Brun   16/10/95
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2018, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -40,9 +40,10 @@ public:
    TPave(Double_t x1, Double_t y1,Double_t x2 ,Double_t y2,
          Int_t bordersize=4 ,Option_t *option="br");
    TPave(const TPave &pave);
+   TPave& operator=(const TPave &pave);
    virtual ~TPave();
 
-   TPave &operator=(const TPave &src);
+   //TPave &operator=(const TPave &src);
 
    void  Copy(TObject &pave) const;
    virtual void  ConvertNDCtoPad();

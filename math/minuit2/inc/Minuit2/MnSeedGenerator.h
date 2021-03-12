@@ -3,7 +3,7 @@
 
 /**********************************************************************
  *                                                                    *
- * Copyright (c) 2005 LCG ROOT Math team,  CERN/PH-SFT                *
+ * Copyright (c) 2005, 2018 LCG ROOT Math team,  CERN/PH-SFT                *
  *                                                                    *
  **********************************************************************/
 
@@ -27,7 +27,7 @@ public:
 
   MnSeedGenerator() {}
 
-  virtual ~MnSeedGenerator() {}
+  virtual ~MnSeedGenerator() = default;
 
   virtual MinimumSeed operator()(const MnFcn&, const GradientCalculator&, const MnUserParameterState&, const MnStrategy&) const;
 

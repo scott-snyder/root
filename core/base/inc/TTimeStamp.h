@@ -109,6 +109,7 @@ public:
    TTimeStamp(UInt_t tloc, Bool_t isUTC = kTRUE, Int_t secOffset = 0,
               Bool_t dosDate = kFALSE);
 
+   TTimeStamp (const TTimeStamp&) = default;
    virtual ~TTimeStamp() { }
 
    // initialize to current time with nsec field incremented from static

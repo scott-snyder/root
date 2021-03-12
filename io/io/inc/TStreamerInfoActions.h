@@ -38,6 +38,8 @@ namespace TStreamerInfoActions {
    public:
       TConfiguration(TVirtualStreamerInfo *info, UInt_t id, TCompInfo_t *compinfo, Int_t offset) : fInfo(info), fElemId(id), fCompInfo(compinfo), fOffset(offset),fLength(1) {};
       TConfiguration(TVirtualStreamerInfo *info, UInt_t id, TCompInfo_t *compinfo, Int_t offset, UInt_t length) : fInfo(info), fElemId(id), fCompInfo(compinfo), fOffset(offset),fLength(length) {};
+      TConfiguration (const TConfiguration&) = default;
+      TConfiguration& operator= (const TConfiguration&) = default;
       virtual ~TConfiguration() {};
 
       virtual void AddToOffset(Int_t delta);

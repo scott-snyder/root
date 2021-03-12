@@ -3,7 +3,7 @@
 
 /**********************************************************************
  *                                                                    *
- * Copyright (c) 2005 LCG ROOT Math team,  CERN/PH-SFT                *
+ * Copyright (c) 2005, 2018 LCG ROOT Math team,  CERN/PH-SFT                *
  *                                                                    *
  **********************************************************************/
 
@@ -24,7 +24,7 @@ public:
 
   VariableMetricEDMEstimator() {}
 
-  ~VariableMetricEDMEstimator() {}
+  ~VariableMetricEDMEstimator() = default;
 
   double Estimate(const FunctionGradient&, const MinimumError&) const;
 
