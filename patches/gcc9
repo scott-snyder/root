@@ -1,0 +1,11 @@
+Bottom: ba2aa6d6387d19ca86019dcfc69c5104d1bc191d
+Top:    6008d5864585d15bd5384e683bc4be8947b41564
+Author: scott snyder <sss@karma>
+Date:   2021-03-12 13:24:34 -0500
+
+Fix gcc9 warnings.
+
+In C++11, implicit declarations of copy and assignment are deprecated if the
+class has a user defined destructor or copy or assignment.  gcc9 now warns
+about this by default.
+Adjust to avoid the warning.

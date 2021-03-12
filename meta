@@ -1,8 +1,9 @@
 Version: 1
-Previous: f7046c5f9df38fe6789f45a6afa95d0a1e41addf
-Head: ea2f41a4d082dbdd2796447516f517d9f6b1eb83
+Previous: 7921cefada644e30ddafe21fa7fb6f6dd9a28d0d
+Head: 19a66e6e146061e29771211db240beb11e3e0af0
 Applied:
   no-roofit-banner: 1dd8a8ae9cdbc6dbae44b226e571ecbf9ed4bb88
   docfix: ea2f41a4d082dbdd2796447516f517d9f6b1eb83
+  gcc9: 19a66e6e146061e29771211db240beb11e3e0af0
 Unapplied:
 Hidden:
