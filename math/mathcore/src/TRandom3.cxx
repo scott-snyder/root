@@ -86,13 +86,6 @@ TRandom3::TRandom3(UInt_t seed)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-/// Default destructor
-
-TRandom3::~TRandom3()
-{
-}
-
-////////////////////////////////////////////////////////////////////////////////
 ///  Machine independent random number generator.
 ///  Produces uniformly-distributed floating points in (0,1)
 ///  Method: Mersenne Twister

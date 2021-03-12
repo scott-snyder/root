@@ -66,6 +66,7 @@ protected:
 public:
    TUUID();
    TUUID(const char *uuid_str);
+   TUUID(const TUUID&) = default;
    virtual ~TUUID();
 
    const char  *AsString() const;

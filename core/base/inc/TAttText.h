@@ -2,7 +2,7 @@
 // Author: Rene Brun   12/12/94
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2018, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -27,7 +27,7 @@ protected:
 public:
    TAttText();
    TAttText(Int_t align, Float_t angle, Color_t color, Style_t font, Float_t tsize);
-   virtual ~TAttText();
+   virtual ~TAttText() = default;
            void     Copy(TAttText &atttext) const;
    virtual Short_t  GetTextAlign() const {return fTextAlign;} ///< Return the text alignment
    virtual Float_t  GetTextAngle() const {return fTextAngle;} ///< Return the text angle

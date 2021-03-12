@@ -3,7 +3,7 @@
 
 /**********************************************************************
  *                                                                    *
- * Copyright (c) 2005 LCG ROOT Math team,  CERN/PH-SFT                *
+ * Copyright (c) 2005, 2018 LCG ROOT Math team,  CERN/PH-SFT                *
  *                                                                    *
  **********************************************************************/
 
@@ -46,7 +46,7 @@ public:
        fMinSeedGen(MnSeedGenerator()),
        fMinBuilder(VariableMetricBuilder(VariableMetricBuilder::kBFGS)) {}
 
-   ~VariableMetricMinimizer() {}
+   ~VariableMetricMinimizer() = default;
 
    const MinimumSeedGenerator& SeedGenerator() const {return fMinSeedGen;}
    const MinimumBuilder& Builder() const {return fMinBuilder;}

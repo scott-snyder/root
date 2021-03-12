@@ -2,7 +2,7 @@
 // Author: Rene Brun   12/12/94
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2018, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -277,13 +277,6 @@ TAttText::TAttText(Int_t align, Float_t angle, Color_t color, Style_t font, Floa
    fTextColor = color;
    fTextFont  = font;
    fTextSize  = tsize;
-}
-
-////////////////////////////////////////////////////////////////////////////////
-/// AttText destructor.
-
-TAttText::~TAttText()
-{
 }
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -238,7 +238,7 @@ public:
     lhs_(lhs), rhs_(rhs) {}
 
   ///
-  ~BinaryOp() {}
+  ~BinaryOp() = default;
 
   ///
   inline T apply(unsigned int i) const {
@@ -281,7 +281,7 @@ public:
     lhs_(lhs), rhs_(rhs) {}
 
   ///
-  ~BinaryOpCopyL() {}
+  ~BinaryOpCopyL() = default;
 
   ///
   inline T apply(unsigned int i) const {
@@ -322,7 +322,7 @@ public:
     lhs_(lhs), rhs_(rhs) {}
 
   ///
-  ~BinaryOpCopyR() {}
+  ~BinaryOpCopyR() = default;
 
   ///
   inline T apply(unsigned int i) const {
@@ -365,7 +365,7 @@ public:
     rhs_(rhs) {}
 
   ///
-  ~UnaryOp() {}
+  ~UnaryOp() = default;
 
   ///
   inline T apply(unsigned int i) const {
@@ -404,7 +404,7 @@ public:
     rhs_(rhs) {}
 
   ///
-  ~Constant() {}
+  ~Constant() = default;
 
   ///
   inline T apply(unsigned int /*i */ ) const { return rhs_; }

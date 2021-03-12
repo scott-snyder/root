@@ -3,7 +3,7 @@
 
 /**********************************************************************
  *                                                                    *
- * Copyright (c) 2005 LCG ROOT Math team,  CERN/PH-SFT                *
+ * Copyright (c) 2005, 2018 LCG ROOT Math team,  CERN/PH-SFT                *
  *                                                                    *
  **********************************************************************/
 
@@ -44,7 +44,7 @@ class ModularFunctionMinimizer : public FunctionMinimizer {
 
 public:
 
-   virtual ~ModularFunctionMinimizer() {}
+   virtual ~ModularFunctionMinimizer() = default;
 
 // inherited interface
    virtual FunctionMinimum Minimize(const FCNBase&, const std::vector<double>&, const std::vector<double>&, unsigned int stra=1, unsigned int maxfcn = 0, double toler = 0.1) const;

@@ -2,7 +2,7 @@
 // Author: Rene Brun   17/10/95
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2018, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -26,7 +26,8 @@ public:
    TPaveLabel();
    TPaveLabel(Double_t x1, Double_t y1,Double_t x2 ,Double_t y2, const char *label, Option_t *option="br");
    TPaveLabel(const TPaveLabel &pavelabel);
-   virtual ~TPaveLabel();
+   TPaveLabel& operator=(const TPaveLabel &pavelabel);
+   virtual ~TPaveLabel() = default;
 
    void          Copy(TObject &pavelabel) const;
    virtual void  Draw(Option_t *option="");
