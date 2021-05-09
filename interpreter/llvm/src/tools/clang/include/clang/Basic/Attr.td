@@ -1687,7 +1687,8 @@ def ArmMveStrictPolymorphism : TypeAttr, TargetSpecificAttr<TargetARM> {
 }
 
 def NoUniqueAddress : InheritableAttr, TargetSpecificAttr<TargetItaniumCXXABI> {
-  let Spellings = [CXX11<"", "no_unique_address", 201803>];
+  let Spellings = [CXX11<"", "no_unique_address", 201803>,
+                   CXX11<"", "__no_unique_address__", 201803>];
   let Subjects = SubjectList<[NonBitField], ErrorDiag>;
   let Documentation = [NoUniqueAddressDocs];
   let SimpleHandler = 1;
