@@ -1,0 +1,12 @@
+Bottom: d23aef0188bc699f88207a8dd0ee902af7d8a690
+Top:    d23aef0188bc699f88207a8dd0ee902af7d8a690
+Author: scott snyder <sss@karma>
+Date:   2021-05-18 12:51:59 -0400
+
+Compatibility with single-header json installation.
+
+
+
+---
+
+
