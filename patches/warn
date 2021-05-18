@@ -1,0 +1,18 @@
+Bottom: 9ba0717436c8cf570762fb6ec45972e4c96f0a1b
+Top:    d7105635e4b4ee96730361ad34ec92c082009ecc
+Author: scott snyder <sss@karma>
+Date:   2021-05-18 12:54:21 -0400
+
+Fix warnings seen with gcc11.
+
+ - Warnings about deprecated implicit declaration of copy ctor/assignment.
+ - Spurious trailing semicolons on function definitions.
+
+
+---
+
+graf2d/graf/inc/TPaveLabel.h       | 7 +++++++
+ math/physics/inc/TVector2.h        | 1 +
+ roofit/roofitcore/inc/RooArgList.h | 2 +-
+ roofit/roofitcore/inc/RooArgSet.h  | 2 +-
+ 4 files changed, 10 insertions(+), 2 deletions(-)
