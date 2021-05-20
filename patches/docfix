@@ -1,0 +1,12 @@
+Bottom: d7105635e4b4ee96730361ad34ec92c082009ecc
+Top:    149bfc9576a1a2660647c723b9d61e10cfe60ab6
+Author: scott snyder <sss@karma>
+Date:   2021-03-12 12:16:38 -0500
+
+Fix typo in documentation.
+
+
+---
+
+documentation/users-guide/InputOutput.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
