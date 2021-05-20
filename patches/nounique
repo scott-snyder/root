@@ -1,0 +1,23 @@
+Bottom: 149bfc9576a1a2660647c723b9d61e10cfe60ab6
+Top:    10d55e17150657cd587a02894a5c81c3af85a9ff
+Author: scott snyder <sss@karma>
+Date:   2021-05-08 21:23:46 -0400
+
+Fix problem building with gcc11.
+
+gcc11 uses the no_unique_address attribute in its implementation of std::tuple
+(which is then used by std::unique_ptr).  However, it spells it
+__no_unique_address__, which cling doesn't recognized.  This can result
+in having differing memory layouts for structures in compiled code versus
+cling, which can give mysterious failures.
+
+Patch cling to recognize __no_unique_address__ as a synonym
+for no_unique_address.
+
+See issue #8071.
+
+
+---
+
+interpreter/llvm/src/tools/clang/include/clang/Basic/Attr.td | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
