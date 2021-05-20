@@ -5,6 +5,8 @@ Date:   2021-03-12 12:16:38 -0500
 
 Fix typo in documentation.
 
+The target list in a read rule is comma-separated, not semicolon separated.
+
 
 ---
 
