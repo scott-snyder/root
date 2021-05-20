@@ -1,10 +1,11 @@
 Version: 1
-Previous: 60f8f7c3800fa62a0686a74e0d792653da027af5
-Head: 23d859640d23296c61f2b5ea5848573d8c8dc13d
+Previous: 318e9138f42cf2a18420bc7c7e67d49b19beb95f
+Head: f5191cea06a5c05db0c96e148263cd404c477784
 Applied:
   json.eve: 1de7a0a1c3f988a4b2a645bfb88c64f2bb325173
   warn: 829ca54cc5de2cd476aabcdedd2a89f79e6eea6a
   docfix: b00f244abe0ffedcb35b185896f8f56335c1e3cf
   nounique: 23d859640d23296c61f2b5ea5848573d8c8dc13d
+  readObjectAnyEvolve: f5191cea06a5c05db0c96e148263cd404c477784
 Unapplied:
 Hidden:

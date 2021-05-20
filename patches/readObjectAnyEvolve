@@ -1,0 +1,23 @@
+Bottom: 10d55e17150657cd587a02894a5c81c3af85a9ff
+Top:    10d55e17150657cd587a02894a5c81c3af85a9ff
+Author: scott snyder <sss@karma>
+Date:   2021-05-20 18:23:55 -0400
+
+Fix type conversion failure in TBufferFile::ReadObjectAny.
+
+TBufferFile::ReadObjectAny does not correctly support schema evolution,
+because the fact that there is a conversion never gets passed to the
+streamer.
+
+This was originally reported in ROOT-8367.  See there for a reproducer.
+This implements the fix proposed in that report.
+
+ATLAS trigger code relies on this.  I currently have a workaround in ATLAS,
+but i'd like to be able to remove that.
+
+Should probably go into 6.24-patches.
+
+
+---
+
+
