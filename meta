@@ -1,6 +1,6 @@
 Version: 1
-Previous: 9257c007be5b63eb696dfeefcb30c94031e1b1bc
-Head: 25ebaeb7e15a58cefe4ff20fdbf749d2d901be83
+Previous: eed433a1e1df8ae8df4abbc467f45d8e64fd4387
+Head: 728efef1e2dcb08b32f6f2893ba3df6e09293d32
 Applied:
   no-roofit-banner: 8bd2ee451e1b0f0bf0f67050087a65e8175b0c6c
   docfix: 37d0360efba558b8eba4910e065763afe2684343
@@ -9,7 +9,6 @@ Applied:
   nounique: d0fe5f70d6906ee0ed5d2c01e7d2eb1c9f7b3a9f
   warn: 9aebbdd66829d4534856254684373d45a4dffea5
   typecrash: 29f1bba8ad2bf1a11f9665cd5b6dc30dcfe12817
-  gcc12: 01b19222de7812955f6fd0f3473e783d0db99feb
-  refresh-temp: 25ebaeb7e15a58cefe4ff20fdbf749d2d901be83
+  gcc12: 728efef1e2dcb08b32f6f2893ba3df6e09293d32
 Unapplied:
 Hidden:
