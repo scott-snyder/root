@@ -1316,7 +1316,7 @@ NVPTXAsmPrinter::getPTXFundamentalTypeStr(Type *Ty, bool useB4PTR) const {
       return "u32";
   }
   llvm_unreachable("unexpected type");
-  return nullptr;
+  return "";
 }
 
 void NVPTXAsmPrinter::emitPTXGlobalVariable(const GlobalVariable *GVar,
