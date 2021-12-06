@@ -4748,6 +4748,7 @@ clang::QualType ROOT::TMetaUtils::ReSubstTemplateArg(clang::QualType input, cons
             // (See AddDefaultParameters).
             return input;
          } else {
+           if (TST->getArg(index).getKind() == clang::TemplateArgument::Type)
             return TST->getArg(index).getAsType();
          }
       }
