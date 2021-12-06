@@ -1,0 +1,89 @@
+Bottom: e572c7dbd87b8787cc8fec81b4f3a5e04d3ba5bc
+Top:    e572c7dbd87b8787cc8fec81b4f3a5e04d3ba5bc
+Author: scott snyder <sss@karma>
+Date:   2021-12-06 09:42:10 -0500
+
+Work around cling failure with gcc12 headers.
+
+With gcc12 headers, i see a cling failure.  In dbg:
+
+
+[sss@karma dvtest]$ genreflex x.h --selection_file=sel.xml -o x_gen.cxx -Ixheaders 2>&1|tee log
+
+genreflex: /home/sss/root/root-6.24.06/src/root/interpreter/llvm/src/tools/clang/include/clang/AST/TemplateBase.h:257: clang::QualType clang::TemplateArgument::getAsType() const: Assertion `getKind() == Type && "Unexpected kind"' failed.
+ #0 0x00007f4124e1bac2 llvm::sys::PrintStackTrace(llvm::raw_ostream&) /home/sss/root/root-6.24.06/src/root/interpreter/llvm/src/lib/Support/Unix/Signals.inc:533:22
+ #1 0x00007f4124e1bb5e PrintStackTraceSignalHandler(void*) /home/sss/root/root-6.24.06/src/root/interpreter/llvm/src/lib/Support/Unix/Signals.inc:594:1
+ #2 0x00007f4124e19bd7 llvm::sys::RunSignalHandlers() /home/sss/root/root-6.24.06/src/root/interpreter/llvm/src/lib/Support/Signals.cpp:68:20
+ #3 0x00007f4124e1b53c SignalHandler(int) /home/sss/root/root-6.24.06/src/root/interpreter/llvm/src/lib/Support/Unix/Signals.inc:385:1
+ #4 0x00007f411fc77a20 __restore_rt (/lib64/libpthread.so.0+0x13a20)
+ #5 0x00007f411f7502a2 raise (/lib64/libc.so.6+0x3d2a2)
+ #6 0x00007f411f7398a4 abort (/lib64/libc.so.6+0x268a4)
+ #7 0x00007f411f739789 _nl_load_domain.cold (/lib64/libc.so.6+0x26789)
+ #8 0x00007f411f748a16 (/lib64/libc.so.6+0x35a16)
+ #9 0x00007f4120a43c9d clang::TemplateArgument::getAsType() const /home/sss/root/root-6.24.06/src/root/interpreter/llvm/src/tools/clang/include/clang/AST/TemplateBase.h:257:5
+#10 0x00007f4120a57b3f ROOT::TMetaUtils::ReSubstTemplateArg(clang::QualType, clang::Type const*) (.localalias) /home/sss/root/root-6.24.06/src/root/core/clingutils/src/TClingUtils.cxx:4752:49
+#11 0x00007f4120a57c5b ROOT::TMetaUtils::ReSubstTemplateArg(clang::QualType, clang::Type const*) (.localalias) /home/sss/root/root-6.24.06/src/root/core/clingutils/src/TClingUtils.cxx:4775:58
+#12 0x00007f4120d05fd7 TClingBaseClassInfo::InternalNext(int) /home/sss/root/root-6.24.06/src/root/core/metacling/src/TClingBaseClassInfo.cxx:341:67
+#13 0x00007f4120d06098 TClingBaseClassInfo::Next(int) /home/sss/root/root-6.24.06/src/root/core/metacling/src/TClingBaseClassInfo.cxx:351:1
+#14 0x00007f4120d060b7 TClingBaseClassInfo::Next() /home/sss/root/root-6.24.06/src/root/core/metacling/src/TClingBaseClassInfo.cxx:356:1
+#15 0x00007f4120bc82c1 TCling::CreateListOfBaseClasses(TClass*) const /home/sss/root/root-6.24.06/src/root/core/metacling/src/TCling.cxx:4267:17
+#16 0x00007f41200c4aa1 TClass::GetListOfBases() /home/sss/root/root-6.24.06/src/root/core/meta/src/TClass.cxx:3649:4
+#17 0x00007f41200c166a TClass::GetBaseClass(TClass const*) (.localalias) /home/sss/root/root-6.24.06/src/root/core/meta/src/TClass.cxx:2659:37
+#18 0x00007f41200c16f2 TClass::GetBaseClass(TClass const*) (.localalias) /home/sss/root/root-6.24.06/src/root/core/meta/src/TClass.cxx:2668:30
+#19 0x00007f41200c8cfe TClass::InheritsFrom(TClass const*) const /home/sss/root/root-6.24.06/src/root/core/meta/src/TClass.cxx:4889:38
+#20 0x00007f41200ccc8b TClass::Property() const /home/sss/root/root-6.24.06/src/root/core/meta/src/TClass.cxx:6054:4
+#21 0x00007f41200d0a69 TClass::IsClassStructOrUnion() const /home/sss/root/root-6.24.06/src/root/core/meta/inc/TClass.h:352:58
+#22 0x00007f41200c5141 TClass::GetListOfDataMembers(bool) /home/sss/root/root-6.24.06/src/root/core/meta/src/TClass.cxx:3757:4
+#23 0x00007f412927255a CloseStreamerInfoROOTFile /home/sss/root/root-6.24.06/src/root/io/rootpcm/src/rootclingIO.cxx:162:42
+#24 0x00007f4120b2fc66 FinalizeStreamerInfoWriting(cling::Interpreter&, bool) /home/sss/root/root-6.24.06/src/root/core/dictgen/src/rootcling_impl.cxx:2627:8
+#25 0x00007f4120b3054e GenerateFullDict(std::ostream&, cling::Interpreter&, RScanner&, std::__cxx11::list<ROOT::TMetaUtils::RConstructorType, std::allocator<ROOT::TMetaUtils::RConstructorType> > const&, bool, bool, bool) /home/sss/root/root-6.24.06/src/root/core/dictgen/src/rootcling_impl.cxx:2769:51
+#26 0x00007f4120b3cec9 RootClingMain(int, char**, bool) /home/sss/root/root-6.24.06/src/root/core/dictgen/src/rootcling_impl.cxx:4861:43
+#27 0x00007f4120b40825 genreflex::invokeRootCling(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool, bool, bool, bool, bool, bool, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/sss/root/root-6.24.06/src/root/core/dictgen/src/rootcling_impl.cxx:5326:46
+#28 0x00007f4120b426f6 GenReflexMain(int, char**) /home/sss/root/root-6.24.06/src/root/core/dictgen/src/rootcling_impl.cxx:6026:36
+#29 0x00007f4120b42b8d ROOT_rootcling_Driver /home/sss/root/root-6.24.06/src/root/core/dictgen/src/rootcling_impl.cxx:6097:29
+#30 0x0000000000401259 main /home/sss/root/root-6.24.06/src/root/main/src/rootcling.cxx:43:51
+#31 0x00007f411f73ab75 __libc_start_main (/lib64/libc.so.6+0x27b75)
+#32 0x000000000040110e _start (/home/sss/root/root-6.24.06/rootsys/bin/genreflex+0x40110e)
+Stack dump:
+0.	Program arguments: rootcling -v2 -f x_gen.cxx -inlineInputHeader -Ixheaders x.h sel.xml 
+
+
+
+
+sel.xml:
+<lcgdict>
+  <class pattern="*iterator<*pair<const*,const*"/>
+</lcgdict>
+
+
+
+x.h:
+#include <string>
+#include <map>
+void foo (std::map<unsigned, std::string>& m, const std::string& s)
+{
+  m.emplace (0, s);
+}
+
+
+or:
+#include <string>
+
+template <class T>
+struct tree_iterator {};
+
+using value_type = std::pair<const unsigned, std::string>;
+using xiterator = tree_iterator<value_type>;
+
+class xtree
+{
+public:
+  std::pair<xiterator, bool> emplace()
+  {
+    return  std::pair<xiterator, bool>(xiterator(), false);
+  }
+};
+
+
+Difficult to reduce it further due to how rootcling implicitly
+reads headers.
