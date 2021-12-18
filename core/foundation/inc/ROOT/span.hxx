@@ -142,6 +142,9 @@ using make_indices = typename make_indices_< Start, Last, Step >::type;
 } // namespace Detail
 }
 
+#if __has_include(<span>) && !defined(__CLING__) && __cplusplus > 201703L
+#include <span>
+#else
 namespace std {
 
 inline namespace __ROOT {
@@ -438,6 +441,7 @@ private:
 // }}}
 } // inline namespace __ROOT
 } // namespace std
+#endif
 
 namespace ROOT {
 // compare operators {{{
@@ -464,6 +468,7 @@ bool operator_equal_impl(ArrayL const& lhs, size_t const lhs_size, ArrayR const&
 } // namespace Detail
 } // namespace ROOT
 
+#if !(__has_include(<span>) && !defined(__CLING__) && __cplusplus > 201703L)
 namespace std {
 inline namespace __ROOT {
 
@@ -580,6 +585,8 @@ span<T> make_view(std::initializer_list<T> const& l)
 
 } // inline namespace __ROOT
 } // namespace std
+#endif
+
 
 
 
