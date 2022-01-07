@@ -1,0 +1,15 @@
+Bottom: aa9ff5ec419ecf5bb02f5fe5833304fca6774e94
+Top:    aa9ff5ec419ecf5bb02f5fe5833304fca6774e94
+Author: scott snyder <sss@karma>
+Date:   2022-01-07 11:31:15 -0500
+
+Add TH2Poly::FindFixBin.
+
+For most TH* classes, FindFixBin acts as a const variant of FindBin.
+However, TH2Poly overrides FindBin with quite different semantics but
+does not also override FindFixBin.  Thus, calling TH2Poly::FindFixBin
+does something unexpected and quite likely wrong.
+
+Clean up by renaming TH2Poly::FindBin to TH2Poly::FindFixBin (since it doesn't
+actually do anything non-const) and add TH2Poly::FindBin forwarding to it.
+
