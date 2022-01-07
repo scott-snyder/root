@@ -3,7 +3,7 @@
 // Author: Olivier Couet, Deniz Gunceler, Danilo Piparo
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2022, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -543,7 +543,7 @@ void TH2Poly::Reset(Option_t *opt)
 ///~~~
 /// where -5 means is the "sea" bin (i.e. unbinned areas)
 
-Int_t TH2Poly::FindBin(Double_t x, Double_t y, Double_t)
+Int_t TH2Poly::FindFixBin(Double_t x, Double_t y, Double_t) const
 {
 
    // Checks for overflow/underflow
@@ -581,6 +581,15 @@ Int_t TH2Poly::FindBin(Double_t x, Double_t y, Double_t)
    // If the search has not returned a bin, the point must be on "the sea"
    return -5;
 }
+
+////////////////////////////////////////////////////////////////////////////////
+/// Non-const version of FindFixBin for interface compatibility.
+
+Int_t TH2Poly::FindBin(Double_t x, Double_t y, Double_t w)
+{
+  return FindFixBin(x, y, w);
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 /// Increment the bin containing (x,y) by 1.
