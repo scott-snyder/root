@@ -2,7 +2,7 @@
 // Author: Olivier Couet, Deniz Gunceler
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2022, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -94,7 +94,8 @@ public:
    virtual Int_t Fill(Double_t x,Double_t y, Double_t w);
    virtual Int_t Fill(const char* name, Double_t w);
    void         FillN(Int_t ntimes, const Double_t* x, const Double_t* y, const Double_t* w, Int_t stride = 1);
-   Int_t        FindBin(Double_t x, Double_t y, Double_t z = 0);
+   virtual Int_t FindBin(Double_t x, Double_t y, Double_t z = 0);
+   virtual Int_t FindFixBin(Double_t x, Double_t y, Double_t z = 0) const;
    TList       *GetBins(){return fBins;} ///< Returns the TList of all bins in the histogram
    virtual Double_t     GetBinContent(Int_t bin) const;
    Bool_t       GetBinContentChanged() const{return fBinContentChanged;}
