@@ -1,0 +1,9 @@
+Bottom: 4c811b89eb3d94017786fd537c0aea16798abb5b
+Top:    4c811b89eb3d94017786fd537c0aea16798abb5b
+Author: scott snyder <sss@karma>
+Date:   2021-05-18 12:54:21 -0400
+
+Fix warnings seen with gcc11.
+
+ - Warnings about deprecated implicit declaration of copy ctor/assignment.
+ - Spurious trailing semicolons on function definitions.
