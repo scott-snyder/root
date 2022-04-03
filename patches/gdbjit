@@ -1,0 +1,7 @@
+Bottom: 4a3820aa95b88f3a195bec2ec5c7c8fec0e3288a
+Top:    4a3820aa95b88f3a195bec2ec5c7c8fec0e3288a
+Author: scott snyder <sss@karma>
+Date:   2022-04-03 18:21:21 -0400
+
+Supply symbols to gdb in jitted code.
+
