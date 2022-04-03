@@ -66,8 +66,15 @@ private:
       // disabling this since we have globally disabled this functionality in
       // IncrementalJIT.cpp (m_GDBListener = 0).
       //
-      // if (auto GDBListener = m_JIT.m_GDBListener)
-      //   GDBListener->NotifyObjectEmitted(*Object->getBinary(), Info);
+      if (auto GDBListener = m_JIT.m_GDBListener) {
+        // Workaround 5.0 API inconsistency:
+        // http://lists.llvm.org/pipermail/llvm-dev/2017-August/116806.html
+        // https://github.com/weliveindetail/JitFromScratch/commit/d4b6778d8d462299674e103d8ecdec1140a45cfe
+        const auto &fixedInfo =
+          static_cast<const llvm::RuntimeDyld::LoadedObjectInfo &>(Info);
+
+        GDBListener->NotifyObjectEmitted(*Object->getBinary(), fixedInfo);
+      }
 
       for (const auto &Symbol: Object.symbols()) {
         auto Flags = Symbol.getFlags();
