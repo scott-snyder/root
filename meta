@@ -1,9 +1,10 @@
 Version: 1
-Previous: d867f81bb1878ff96e90ca04a42ec7ed27da6e84
-Head: eb7ba8f5e170c0d21b2123894378d5a48b69fcd6
+Previous: 40fc85eadcde444707c00489c88fb35a693faad6
+Head: 5ba6d1aab53a0d4fe408dd9132df852b69253c80
 Applied:
   no-roofit-banner: 058a4f7df8815352db62cb49e67c0ea2d9d12d9f
   gitignore: dd7d6464d1c39d4b66f565764ae1032d18480a29
   nounique: eb7ba8f5e170c0d21b2123894378d5a48b69fcd6
+  typecrash: 5ba6d1aab53a0d4fe408dd9132df852b69253c80
 Unapplied:
 Hidden:
