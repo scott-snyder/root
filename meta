@@ -1,6 +1,6 @@
 Version: 1
-Previous: 28ff82283235ed529516533de1730a00e993ccfd
-Head: f85db34c9693db54813e2678d7be8a3c153872d8
+Previous: 7ceae35f651230dd9a1bb0d87303c0ca9632d46e
+Head: 4f4e393066455a6453e0acea02e3f545af148fcb
 Applied:
   no-roofit-banner: 058a4f7df8815352db62cb49e67c0ea2d9d12d9f
   gitignore: dd7d6464d1c39d4b66f565764ae1032d18480a29
@@ -11,5 +11,6 @@ Applied:
   span: e499a6285b03d0a01a6064323af9aae2eb4135f5
   th2poly: 110724a2e7f2231171019cb44c0050dba912a82f
   gdbjit: f85db34c9693db54813e2678d7be8a3c153872d8
+  jitcrash: 4f4e393066455a6453e0acea02e3f545af148fcb
 Unapplied:
 Hidden:
