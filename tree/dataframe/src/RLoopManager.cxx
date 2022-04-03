@@ -1,5 +1,5 @@
 /*************************************************************************
- * Copyright (C) 1995-2021, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2022, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -61,9 +61,9 @@ namespace {
 /// We want RLoopManagers to be able to add their code to a global "code to execute via cling",
 /// so that, lazily, we can jit everything that's needed by all RDFs in one go, which is potentially
 /// much faster than jitting each RLoopManager's code separately.
-static std::string &GetCodeToJit()
+static std::vector<std::string> &GetCodeToJit()
 {
-   static std::string code;
+   static std::vector<std::string> code;
    return code;
 }
 
@@ -709,7 +709,7 @@ void RLoopManager::Jit()
    // TODO this should be a read lock unless we find GetCodeToJit non-empty
    R__LOCKGUARD(gROOTMutex);
 
-   const std::string code = std::move(GetCodeToJit());
+   const std::vector<std::string> code = std::move(GetCodeToJit());
    if (code.empty()) {
       R__LOG_INFO(RDFLogChannel()) << "Nothing to jit and execute.";
       return;
@@ -717,7 +717,12 @@ void RLoopManager::Jit()
 
    TStopwatch s;
    s.Start();
-   RDFInternal::InterpreterCalc(code, "RLoopManager::Run");
+   for (const std::string& s : code) {
+     FILE* f = fopen("jit.log", "a");
+     fwrite (s.c_str(), s.size(), 1, f);
+     fclose (f);
+     RDFInternal::InterpreterCalc(s, "RLoopManager::Run");
+   }
    s.Stop();
    R__LOG_INFO(RDFLogChannel()) << "Just-in-time compilation phase completed"
                                 << (s.RealTime() > 1e-3 ? " in " + std::to_string(s.RealTime()) + " seconds." : ".");
@@ -855,7 +860,13 @@ void RLoopManager::Report(ROOT::RDF::RCutFlowReport &rep) const
 void RLoopManager::ToJitExec(const std::string &code) const
 {
    R__LOCKGUARD(gROOTMutex);
-   GetCodeToJit().append(code);
+   std::vector<std::string>& v = GetCodeToJit();
+   if (v.empty() || v.back().size() + code.size() > 1000000) {
+     v.push_back (code);
+   }
+   else {
+     v.back().append(code);
+   }
 }
 
 void RLoopManager::RegisterCallback(ULong64_t everyNEvents, std::function<void(unsigned int)> &&f)
