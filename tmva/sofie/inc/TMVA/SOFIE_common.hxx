@@ -7,6 +7,7 @@
 #include <type_traits>
 #include <cstdint>
 #include <string>
+#include <cstring>
 #include <vector>
 #include <memory>
 #include <regex>
