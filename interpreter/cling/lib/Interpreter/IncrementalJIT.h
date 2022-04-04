@@ -54,7 +54,7 @@ private:
     NotifyObjectLoadedT(IncrementalJIT &jit) : m_JIT(jit) {}
     void operator()(llvm::orc::VModuleKey K,
                     const llvm::object::ObjectFile &Object,
-                    const llvm::LoadedObjectInfo &/*Info*/) const {
+                    const llvm::LoadedObjectInfo &Info) const {
       m_JIT.m_UnfinalizedSections[K]
         = std::move(m_JIT.m_SectionsAllocatedSinceLastLoad);
       m_JIT.m_SectionsAllocatedSinceLastLoad = SectionAddrSet();
@@ -73,7 +73,7 @@ private:
         const auto &fixedInfo =
           static_cast<const llvm::RuntimeDyld::LoadedObjectInfo &>(Info);
 
-        GDBListener->NotifyObjectEmitted(*Object->getBinary(), fixedInfo);
+        GDBListener->notifyObjectLoaded(K, Object, fixedInfo);
       }
 
       for (const auto &Symbol: Object.symbols()) {
