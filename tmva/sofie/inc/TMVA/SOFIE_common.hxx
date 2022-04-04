@@ -10,6 +10,7 @@
 #include <cstdint>
 #include <cstring>
 #include <string>
+#include <cstring>
 #include <vector>
 #include <memory>
 #include <regex>
