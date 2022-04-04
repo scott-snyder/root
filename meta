@@ -1,5 +1,5 @@
 Version: 1
-Previous: 6cc3895010834dcc686382f0c68a3223c94e1c8c
+Previous: 8c80c946118614ad9b0b39c6db536e13600bb307
 Head: 68b05bdec1a6e2e67aeb0b41437c28fde8004cec
 Applied:
   no-roofit-banner: 058a4f7df8815352db62cb49e67c0ea2d9d12d9f
@@ -13,5 +13,4 @@ Applied:
   gdbjit: d5404cd29c69ea47e231250c1aa095f127b92879
   jitcrash: 68b05bdec1a6e2e67aeb0b41437c28fde8004cec
 Unapplied:
-  gcc12inc: 0d70daede35217ea6546b0c878da6e9b83b42a56
 Hidden:

@@ -1,8 +1,0 @@
-Bottom: 48b5abfb9b88f0fd94104576b6f593b137c4d36b
-Top:    9911fda3eadc0c3af814d83556aa903b81a3dd4d
-Author: scott snyder <sss@karma>
-Date:   2022-04-03 23:22:54 -0400
-
-Need to #include <string> for std::memcpy.
-
-Needed to fix compilation with gcc12.
