@@ -123,6 +123,7 @@ DictSelectionReader::ExtractTemplateArgValue(const T &myClass,
 {
    const clang::RecordDecl *rcrdDecl =
       ROOT::TMetaUtils::GetUnderlyingRecordDecl(myClass.getType());
+   if (!rcrdDecl) return 0;
    const clang::CXXRecordDecl *cxxRcrdDecl =
       llvm::dyn_cast<clang::CXXRecordDecl>(rcrdDecl);
 
