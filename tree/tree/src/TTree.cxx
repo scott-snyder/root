@@ -2,7 +2,7 @@
 // Author: Rene Brun   12/01/96
 
 /*************************************************************************
- * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2000, 2022, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -2943,8 +2943,11 @@ Int_t TTree::CheckBranchAddressType(TBranch* branch, TClass* ptrClass, EDataType
          TClass *onfileValueClass = expectedClass->GetCollectionProxy()->GetValueClass();
          TClass *inmemValueClass = ptrClass->GetCollectionProxy()->GetValueClass();
 
-         if (inmemValueClass->GetSchemaRules() &&
-             inmemValueClass->GetSchemaRules()->HasRuleWithSourceClass(onfileValueClass->GetName() ) )
+         if ((inmemValueClass->GetSchemaRules() &&
+              inmemValueClass->GetSchemaRules()->HasRuleWithSourceClass(onfileValueClass->GetName() ))
+             // xAODJetAthenaPool, xAODRootAccess
+             // || inmemValueClass == onfileValueClass
+             )
          {
             TBranchElement* bEl = (TBranchElement*)branch;
             bEl->SetTargetClass( ptrClass->GetName() );
