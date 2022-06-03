@@ -1,0 +1,7 @@
+Bottom: e13715cf0a2e351e1d961cd64fbe8e4a5340b3dc
+Top:    68ce87ca9b13152bb65d8c49f18bcebf631ebe21
+Author: scott snyder <sss@karma>
+Date:   2022-05-02 22:26:14 -0400
+
+Fix selection crash.
+
