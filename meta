@@ -1,9 +1,10 @@
 Version: 1
-Previous: 4fe4c11c647d3fb96e0a51cff8bf3c625e738d13
-Head: 7158f04fd993c992d51cb761980239df452daad0
+Previous: c8a1c0945fc3d52dfdf1d5120cb36d94077183f3
+Head: 25a17cc9cf1c2c6f410a2a79321efaa7f11bd370
 Applied:
   gitignore: af379d52b41dff799ac75845abf36f35066c7131
   no-roofit-banner: 01971ae52faa8d4f8dd69aa882016c363652b1a8
   typecrash: 7158f04fd993c992d51cb761980239df452daad0
+  gcc12: 25a17cc9cf1c2c6f410a2a79321efaa7f11bd370
 Unapplied:
 Hidden:
