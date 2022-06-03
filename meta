@@ -1,6 +1,6 @@
 Version: 1
-Previous: 36ca11371f492732dd00ae88f3721103386d38b3
-Head: 93eacde7919f583c9dbf4f222fb3a1acb0dd2e60
+Previous: 9a49d069ba9b1522a7a87d3ff2d76a8b10b864fb
+Head: 57b6ead86f110187af05431fadd8e97416ba3fb9
 Applied:
   gitignore: af379d52b41dff799ac75845abf36f35066c7131
   no-roofit-banner: 01971ae52faa8d4f8dd69aa882016c363652b1a8
@@ -15,5 +15,6 @@ Applied:
   selfix: 850db2a7cd929f3a37f6b59df0a51f250cc1c7b5
   cnvtmp: bd09ba91dec0606aec13a74ce95a9fd16c0b31a4
   modulemap: 93eacde7919f583c9dbf4f222fb3a1acb0dd2e60
+  clangwarn: 57b6ead86f110187af05431fadd8e97416ba3fb9
 Unapplied:
 Hidden:
