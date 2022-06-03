@@ -1,0 +1,6 @@
+Bottom: 3824baef9e0606d91287d5d7a405654e4599df40
+Top:    3824baef9e0606d91287d5d7a405654e4599df40
+Author: scott snyder <sss@karma>
+Date:   2022-06-03 17:06:06 -0400
+
+Fix compilation for clang forward declaration difficulty?
