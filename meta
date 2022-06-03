@@ -1,7 +1,8 @@
 Version: 1
-Previous: c1c0581489c934e35e84e801f8d083668ae0d8b9
-Head: af379d52b41dff799ac75845abf36f35066c7131
+Previous: 29f209f1bb16badef64788a2fe58bf04819baed2
+Head: 01971ae52faa8d4f8dd69aa882016c363652b1a8
 Applied:
   gitignore: af379d52b41dff799ac75845abf36f35066c7131
+  no-roofit-banner: 01971ae52faa8d4f8dd69aa882016c363652b1a8
 Unapplied:
 Hidden:
