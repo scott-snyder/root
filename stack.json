@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "924359a9adc56c4c94b2ed8845d412f8fd8436db",
-  "head": "8d3f26f50ff7a5e3f5987fc32267f6cf06ecf1db",
+  "prev": "6bf4af1393998d8631ebd4edb39b6f7d85bc97a7",
+  "head": "ee5dab1f049e4854f749051ae70e201e64870437",
   "applied": [
     "gitignore",
     "no-roofit-banner",
@@ -15,7 +15,8 @@
     "gcc12inc",
     "selfix",
     "cnvtmp",
-    "modulemap"
+    "modulemap",
+    "clangwarn"
   ],
   "unapplied": [],
   "hidden": [],
@@ -58,6 +59,9 @@
     },
     "modulemap": {
       "oid": "8d3f26f50ff7a5e3f5987fc32267f6cf06ecf1db"
+    },
+    "clangwarn": {
+      "oid": "ee5dab1f049e4854f749051ae70e201e64870437"
     }
   }
 }

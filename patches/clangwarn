@@ -1,0 +1,6 @@
+Bottom: c5dfa0f783179704ce713b2204bab6aa990b4398
+Top:    5f83f36821e9b7a452dd962ac3f1cd0eb681dc66
+Author: scott snyder <sss@karma>
+Date:   2022-06-03 17:05:22 -0400
+
+Fix a couple clang warnings.
