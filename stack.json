@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "54d5b8b64fa00988937d3d617634e17211fd2ff9",
-  "head": "ab0c5b144e69c291ce3f8e84fad59abea0a7bbbb",
+  "prev": "924359a9adc56c4c94b2ed8845d412f8fd8436db",
+  "head": "8d3f26f50ff7a5e3f5987fc32267f6cf06ecf1db",
   "applied": [
     "gitignore",
     "no-roofit-banner",
@@ -14,7 +14,8 @@
     "jitcrash",
     "gcc12inc",
     "selfix",
-    "cnvtmp"
+    "cnvtmp",
+    "modulemap"
   ],
   "unapplied": [],
   "hidden": [],
@@ -54,6 +55,9 @@
     },
     "cnvtmp": {
       "oid": "ab0c5b144e69c291ce3f8e84fad59abea0a7bbbb"
+    },
+    "modulemap": {
+      "oid": "8d3f26f50ff7a5e3f5987fc32267f6cf06ecf1db"
     }
   }
 }

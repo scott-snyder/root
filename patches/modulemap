@@ -1,0 +1,8 @@
+Bottom: c17d6012072ad32d81e9523a060a8f9f39995ac7
+Top:    c5dfa0f783179704ce713b2204bab6aa990b4398
+Author: Vassil Vassilev <v.g.vassilev@gmail.com>
+Date:   2022-04-30 14:29:28 +0000
+
+[cxxmodules] Reduce the amount of header duplications in the modules.
+
+This resolves a merging bug with libstdc++12. Fixes root-project/root#10478
