@@ -1,0 +1,6 @@
+Bottom: d90ed0ac5e400f3957caca3ab1fe8892534776ba
+Top:    4d42bfdf33ffe698dc52fcea9f372fa4b9c00abc
+Author: scott snyder <sss@karma>
+Date:   2022-04-03 18:23:32 -0400
+
+Fix crashes due to jitted functions getting too large.
