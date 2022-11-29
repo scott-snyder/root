@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "2399e26b73555842eb82ae92dbb4abb4e3101bf9",
-  "head": "18df58b38f96974538cf0e2a0d67e61a0f2b8488",
+  "prev": "148f3586736a440af8b59faf41d2d0a20f669395",
+  "head": "8c6d509c3b2d3c45eb361dcb7e369e18681a6bcb",
   "applied": [
     "gitignore",
     "no-roofit-banner",
@@ -9,7 +9,8 @@
     "gcc12",
     "unused-warn",
     "span",
-    "th2poly"
+    "th2poly",
+    "gdbjit"
   ],
   "unapplied": [],
   "hidden": [],
@@ -34,6 +35,9 @@
     },
     "th2poly": {
       "oid": "18df58b38f96974538cf0e2a0d67e61a0f2b8488"
+    },
+    "gdbjit": {
+      "oid": "8c6d509c3b2d3c45eb361dcb7e369e18681a6bcb"
     }
   }
 }
