@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "301718bb3aaa951103befe57c33814083765571f",
-  "head": "2eba4e38123dd2f63a464ed9a2aee9202366868e",
+  "prev": "118521c14b24d9911bc0310fa130a6119f906dca",
+  "head": "2491b00ea60cf4ff469fa482ae1a45f7aa33a0f8",
   "applied": [
     "gitignore",
     "no-roofit-banner",
@@ -11,7 +11,8 @@
     "span",
     "th2poly",
     "gdbjit",
-    "jitcrash"
+    "jitcrash",
+    "gcc12inc"
   ],
   "unapplied": [],
   "hidden": [],
@@ -42,6 +43,9 @@
     },
     "jitcrash": {
       "oid": "2eba4e38123dd2f63a464ed9a2aee9202366868e"
+    },
+    "gcc12inc": {
+      "oid": "2491b00ea60cf4ff469fa482ae1a45f7aa33a0f8"
     }
   }
 }
