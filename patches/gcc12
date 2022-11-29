@@ -1,0 +1,8 @@
+Bottom: 4ae2b63e9fa08815cf1984516553ff9bc5922f20
+Top:    f840af6b78f842701e96546c320cd6ed94bfa5d6
+Author: scott snyder <sss@karma>
+Date:   2021-12-06 09:43:25 -0500
+
+Fix compilation with gcc12.
+
+Can't init string from nullptr.
