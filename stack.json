@@ -1,10 +1,11 @@
 {
   "version": 5,
-  "prev": "3bb04063c791c102093f466d1b30046bee0b613f",
-  "head": "cb48d3a3f03275f976552a4b7595f3797ed0c2ec",
+  "prev": "a09b466de8169945f131cc2cda77be4811b0ad4c",
+  "head": "2c68f2563abeb6999943fcb5be11cc8032c85dc4",
   "applied": [
     "gitignore",
-    "no-roofit-banner"
+    "no-roofit-banner",
+    "typecrash"
   ],
   "unapplied": [],
   "hidden": [],
@@ -14,6 +15,9 @@
     },
     "no-roofit-banner": {
       "oid": "cb48d3a3f03275f976552a4b7595f3797ed0c2ec"
+    },
+    "typecrash": {
+      "oid": "2c68f2563abeb6999943fcb5be11cc8032c85dc4"
     }
   }
 }
