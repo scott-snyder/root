@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "5e28be12adc5d00c23c09ad7dc3a61dbaad48524",
-  "head": "1097c9ae2c47f0ba1588e35230e6a7baa4b43134",
+  "prev": "3f41cdc7420c9a4fd66f7adf82ba0c36676971fa",
+  "head": "d095fac020e19ef00cd510c54bbfec25745459b8",
   "applied": [
     "gitignore",
     "no-roofit-banner",
@@ -16,7 +16,8 @@
     "cnvtmp",
     "modulemap",
     "clangwarn",
-    "fwdWorkaround"
+    "fwdWorkaround",
+    "gcc13"
   ],
   "unapplied": [],
   "hidden": [],
@@ -62,6 +63,9 @@
     },
     "fwdWorkaround": {
       "oid": "1097c9ae2c47f0ba1588e35230e6a7baa4b43134"
+    },
+    "gcc13": {
+      "oid": "d095fac020e19ef00cd510c54bbfec25745459b8"
     }
   }
 }

@@ -1,0 +1,8 @@
+Bottom: 3f2a61cb24ba8a2672c16bd763d503867a3003e2
+Top:    3f2a61cb24ba8a2672c16bd763d503867a3003e2
+Author: scott snyder <sss@karma>
+Date:   2022-11-29 22:05:39 -0500
+
+Fix compilation with gcc13.
+
+Missing #include <cstdint>.
