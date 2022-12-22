@@ -1,10 +1,11 @@
 {
   "version": 5,
-  "prev": "0eb5282222c5d8d9974913096f67157de1cd1b4f",
-  "head": "0336235b97dc8eda16536a182006e41e0a44e823",
-  "applied": [],
+  "prev": "8a0ecdbc64476620b94722bc50763b7696ddcf64",
+  "head": "e5510016e6e7f2300a0d661613d735e513054e4b",
+  "applied": [
+    "json.eve"
+  ],
   "unapplied": [
-    "json.eve",
     "warn",
     "docfix",
     "nounique",
@@ -13,7 +14,7 @@
   "hidden": [],
   "patches": {
     "json.eve": {
-      "oid": "1de7a0a1c3f988a4b2a645bfb88c64f2bb325173"
+      "oid": "e5510016e6e7f2300a0d661613d735e513054e4b"
     },
     "warn": {
       "oid": "829ca54cc5de2cd476aabcdedd2a89f79e6eea6a"
