@@ -1,0 +1,31 @@
+{
+  "version": 5,
+  "prev": "82669dd2e42bef47aa4b988fa5031ecbbaf77c25",
+  "head": "3dd34cb267b6d50467eb50785a3f2bc58670ad16",
+  "applied": [],
+  "unapplied": [
+    "json.eve",
+    "warn",
+    "docfix",
+    "nounique",
+    "readObjectAnyEvolve"
+  ],
+  "hidden": [],
+  "patches": {
+    "json.eve": {
+      "oid": "1de7a0a1c3f988a4b2a645bfb88c64f2bb325173"
+    },
+    "warn": {
+      "oid": "829ca54cc5de2cd476aabcdedd2a89f79e6eea6a"
+    },
+    "docfix": {
+      "oid": "b00f244abe0ffedcb35b185896f8f56335c1e3cf"
+    },
+    "nounique": {
+      "oid": "23d859640d23296c61f2b5ea5848573d8c8dc13d"
+    },
+    "readObjectAnyEvolve": {
+      "oid": "57bfbdce533a27d98cec86b7d04c0144f247c25d"
+    }
+  }
+}
