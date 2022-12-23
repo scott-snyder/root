@@ -1,8 +1,0 @@
-Bottom: 5416c1943b502b67eded87bb7a22ed6d9559a190
-Top:    5416c1943b502b67eded87bb7a22ed6d9559a190
-Author: scott snyder <sss@karma>
-Date:   2021-03-12 12:16:38 -0500
-
-Fix typo in documentation.
-
-The target list in a read rule is comma-separated, not semicolon separated.

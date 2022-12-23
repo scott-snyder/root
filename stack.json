@@ -1,31 +1,15 @@
 {
   "version": 5,
-  "prev": "35064934e189f63638f4e05127d68a8d4b144035",
-  "head": "23b641c5e9415585a76a75cb506cbccef25062ec",
+  "prev": "918b0971df165b0f120bf0679e71184e8219583d",
+  "head": "d0da88c942335ac1533d2224db51254398bd795b",
   "applied": [
-    "json.eve",
-    "warn",
-    "docfix",
-    "nounique",
-    "readObjectAnyEvolve"
+    "nounique"
   ],
   "unapplied": [],
   "hidden": [],
   "patches": {
-    "json.eve": {
-      "oid": "e5510016e6e7f2300a0d661613d735e513054e4b"
-    },
-    "warn": {
-      "oid": "16958c61700cc0fc60b36bd6fb9f510d856a4d8c"
-    },
-    "docfix": {
-      "oid": "171ed4ccfa1b7e9837ec95aa0a79c11677f8392b"
-    },
     "nounique": {
-      "oid": "bc1a387167c50e77bcb5a58e63b20c535feac136"
-    },
-    "readObjectAnyEvolve": {
-      "oid": "23b641c5e9415585a76a75cb506cbccef25062ec"
+      "oid": "d0da88c942335ac1533d2224db51254398bd795b"
     }
   }
 }
