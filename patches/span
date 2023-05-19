@@ -1,0 +1,7 @@
+Bottom: 8501bc563e8828d86f1d91ca249f10651b766bd7
+Top:    8501bc563e8828d86f1d91ca249f10651b766bd7
+Author: scott snyder <sss@karma>
+Date:   2021-12-18 11:06:00 -0500
+
+Fix compilation errors with c++23 span.
+
