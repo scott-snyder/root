@@ -1,0 +1,7 @@
+Bottom: 85d3ad80c92b7747130c8a414a193d9959978545
+Top:    8501bc563e8828d86f1d91ca249f10651b766bd7
+Author: scott snyder <sss@karma>
+Date:   2021-12-06 17:48:35 -0500
+
+Avoid giving warnings when cling wraps a [[nodiscard]] function.
+
