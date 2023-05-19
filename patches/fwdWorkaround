@@ -1,6 +1,0 @@
-Bottom: 2f8981d431889d6382da6f2673feb835db0c9124
-Top:    2f8981d431889d6382da6f2673feb835db0c9124
-Author: scott snyder <sss@karma>
-Date:   2022-06-03 17:06:06 -0400
-
-Fix compilation for clang forward declaration difficulty?
