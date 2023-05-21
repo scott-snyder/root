@@ -3,7 +3,7 @@
  * Authors:
  *   PB, Patrick Bos, Netherlands eScience Center, p.bos@esciencecenter.nl
  *
- * Copyright (c) 2021, CERN
+ * Copyright (c) 2021, 2023, CERN
  *
  * Redistribution and use in source and binary forms,
  * with or without modification, are permitted according to the terms
@@ -74,7 +74,7 @@ public:
          }
       }
 
-      bool operator==(const Section& rhs) {
+      bool operator==(const Section& rhs) const {
          return begin_fraction == rhs.begin_fraction && end_fraction == rhs.end_fraction;
       }
 
