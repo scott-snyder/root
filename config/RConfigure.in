@@ -27,7 +27,9 @@
 # if defined(_MSC_VER)
 #  pragma message("The C++ standard in this build does not match ROOT configuration (@__cplusplus@); this might cause unexpected issues. And please make sure you are using the -Zc:__cplusplus compilation flag")
 # else
+#if 0
 #  warning "The C++ standard in this build does not match ROOT configuration (@__cplusplus@); this might cause unexpected issues"
+#endif
 # endif
 #endif
 
