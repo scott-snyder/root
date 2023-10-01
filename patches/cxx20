@@ -1,8 +1,0 @@
-Bottom: 3013cde5a1b4d163743d303cc7aaec01f392a26d
-Top:    3013cde5a1b4d163743d303cc7aaec01f392a26d
-Author: scott snyder <sss@karma>
-Date:   2023-05-20 21:05:03 -0400
-
-Missing const qualifier.
-
-Fixes compilation as c++20.

@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "78c65f7009d9938977dfc1977e645e3104f46f0d",
-  "head": "2fa4982d8034875bc4e4e39daac35280b0f16a3c",
+  "prev": "e97c3425fca78a7505bff5c6b83cd2e1e57b3c06",
+  "head": "16e57d3a9b8dae48cd006339e9808bc9cfaa502a",
   "applied": [
     "gitignore",
     "unused-warn",
@@ -11,7 +11,6 @@
     "selfix",
     "cnvtmp",
     "modulemap",
-    "cxx20",
     "cxxstd",
     "libname"
   ],
@@ -42,14 +41,11 @@
     "modulemap": {
       "oid": "24b36716f80c6d857f1b64c502dd6fdf89c60c14"
     },
-    "cxx20": {
-      "oid": "e6557dac0da54831b4bccad2bee46d7135f74dee"
-    },
     "cxxstd": {
-      "oid": "d73f3aa945448c555170d4435d554ef2e9083eb7"
+      "oid": "4301a54b9d41c391e373e1206db27ff6c8dd34a0"
     },
     "libname": {
-      "oid": "2fa4982d8034875bc4e4e39daac35280b0f16a3c"
+      "oid": "16e57d3a9b8dae48cd006339e9808bc9cfaa502a"
     }
   }
 }
