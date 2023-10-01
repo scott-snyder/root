@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "76d8f31437c7f88641bc3d228647debbb9cc6c59",
-  "head": "cd3e1f5357110295a202d947c4d49a6231294f9c",
+  "prev": "ee68e1f6768c9b1a9354ad3b2541f2d6655ddeb0",
+  "head": "41aa5200420e9d32ad115c962ad2d01789708237",
   "applied": [
     "gitignore",
     "unused-warn",
@@ -12,7 +12,8 @@
     "cnvtmp",
     "modulemap",
     "cxx20",
-    "cxxstd"
+    "cxxstd",
+    "libname"
   ],
   "unapplied": [],
   "hidden": [],
@@ -46,6 +47,9 @@
     },
     "cxxstd": {
       "oid": "cd3e1f5357110295a202d947c4d49a6231294f9c"
+    },
+    "libname": {
+      "oid": "41aa5200420e9d32ad115c962ad2d01789708237"
     }
   }
 }
