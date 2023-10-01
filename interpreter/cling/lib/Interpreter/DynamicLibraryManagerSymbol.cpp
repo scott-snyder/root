@@ -887,7 +887,8 @@ namespace cling {
       llvm::Expected<llvm::StringRef> SymNameErr = S.getName();
       if (!SymNameErr) {
         cling::errs()<< "Dyld::BuildBloomFilter: Failed to read symbol "
-                     << SymNameErr.get() << "\n";
+                     << SymNameErr.get() << " from library "
+                     << Lib->GetFullName() << "\n";
         continue;
       }
 
@@ -920,7 +921,8 @@ namespace cling {
         llvm::Expected<StringRef> SymNameErr = S.getName();
         if (!SymNameErr) {
           cling::errs() << "Dyld::BuildBloomFilter: Failed to read symbol "
-                        <<SymNameErr.get() << "\n";
+                        << SymNameErr.get() << " from library "
+                        << Lib->GetFullName() << "\n";
           continue;
         }
 
