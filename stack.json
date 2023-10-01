@@ -1,8 +1,9 @@
 {
   "version": 5,
-  "prev": "e7301de51e3c04905d96ca048a995d5cadd96914",
-  "head": "fa3b00094b9b942931b68a818e65c9c58be17a09",
-  "applied": [
+  "prev": "4aab146d2ee981d9694ff6e2f6814b9b42cd2c45",
+  "head": "18b4f317b389fa7931d7eb8e00525f4dca44be0f",
+  "applied": [],
+  "unapplied": [
     "gitignore",
     "unused-warn",
     "th2poly",
@@ -15,7 +16,6 @@
     "cxxstd",
     "libname"
   ],
-  "unapplied": [],
   "hidden": [],
   "patches": {
     "gitignore": {
