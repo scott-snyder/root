@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "prev": "1da63be49be0ae16b4b10468ac6502966223b099",
+  "prev": "be5e7c802955bffc8a1fe9d57b95d6bece782f03",
   "head": "87668a660889d5d863acc8b9af3dda7ca428bdc4",
   "applied": [
     "gitignore",
@@ -13,9 +13,7 @@
     "cxxstd",
     "libname"
   ],
-  "unapplied": [
-    "modulemap"
-  ],
+  "unapplied": [],
   "hidden": [],
   "patches": {
     "gitignore": {
@@ -44,9 +42,6 @@
     },
     "libname": {
       "oid": "87668a660889d5d863acc8b9af3dda7ca428bdc4"
-    },
-    "modulemap": {
-      "oid": "24b36716f80c6d857f1b64c502dd6fdf89c60c14"
     }
   }
 }
