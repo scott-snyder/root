@@ -1,7 +1,7 @@
 // Authors: Axel Naumann, Philippe Canal, Danilo Piparo
 
 /*************************************************************************
- * Copyright (C) 1995-2019, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2023, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -2784,6 +2784,9 @@ int GenerateFullDict(std::ostream &dictStream,
 void CreateDictHeader(std::ostream &dictStream, const std::string &main_dictname)
 {
    dictStream  << "// Do NOT change. Changes will be lost next time file is generated\n\n"
+               << "#if __GNUC__ == 14\n"
+               << "#pragma GCC diagnostic ignored \"-Wmaybe-uninitialized\"\n"
+               << "#endif\n"
                << "#define R__DICTIONARY_FILENAME " << main_dictname << std::endl
 
                // We do not want deprecation warnings to fire in dictionaries
