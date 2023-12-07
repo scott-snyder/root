@@ -3075,10 +3075,10 @@ static bool hasSameOverloadableAttrs(const FunctionDecl *A,
 
 /// Determine whether the two declarations refer to the same entity.
 static bool isSameEntity(NamedDecl *X, NamedDecl *Y) {
-  assert(X->getDeclName() == Y->getDeclName() && "Declaration name mismatch!");
-
   if (X == Y)
     return true;
+
+  assert(X->getDeclName() == Y->getDeclName() && "Declaration name mismatch!");
 
   // Must be in the same context.
   //
