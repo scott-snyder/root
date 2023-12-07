@@ -1,0 +1,6 @@
+Bottom: 219faaa44e3c444bdc4a84db7928274b29cb5627
+Top:    219faaa44e3c444bdc4a84db7928274b29cb5627
+Author: scott snyder <sss@karma>
+Date:   2023-12-07 11:19:51 -0500
+
+Fix an assertion failure seen when building root in debug mode.
