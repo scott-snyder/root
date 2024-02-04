@@ -1,13 +1,14 @@
 {
   "version": 5,
-  "prev": "df850229bba1af8b560683420c88d57f07b5c624",
-  "head": "9ceedf2e5b41769158883af6e02168f1131d82af",
+  "prev": "2558d56592ce2fba71f181da20fdc40d97923ac7",
+  "head": "d669cee9d3ef436238e932f77daf21ab27013fce",
   "applied": [
     "gitignore",
     "unused-warn",
     "th2poly",
     "jitcrash",
-    "gcc12inc"
+    "gcc12inc",
+    "selfix"
   ],
   "unapplied": [],
   "hidden": [],
@@ -26,6 +27,9 @@
     },
     "gcc12inc": {
       "oid": "9ceedf2e5b41769158883af6e02168f1131d82af"
+    },
+    "selfix": {
+      "oid": "d669cee9d3ef436238e932f77daf21ab27013fce"
     }
   }
 }
