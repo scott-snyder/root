@@ -1,0 +1,6 @@
+Bottom: ae26a937bcec65d56c1b3e164b03082a2a147a3e
+Top:    fc6c7f4fd67ba00b024d81faec1dd15d36b353f2
+Author: scott snyder <sss@karma>
+Date:   2023-10-01 10:19:02 -0400
+
+Better diagnostic for dynamic linking failure.
