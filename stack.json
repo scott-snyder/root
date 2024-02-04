@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "0775586ff4220c38b3a3627e36b7599b2908753d",
-  "head": "81c1f22e11eb3872df441a78f147345a48a2c047",
+  "prev": "3e4ec019292e4f29ec1ea895ada76a8483d57b70",
+  "head": "08965af63bb48772203cbae9dc5bb5978aa56f2a",
   "applied": [
     "gitignore",
     "unused-warn",
@@ -12,7 +12,8 @@
     "cnvtmp",
     "cxxstd",
     "libname",
-    "gccbug112766"
+    "gccbug112766",
+    "assert"
   ],
   "unapplied": [],
   "hidden": [],
@@ -46,6 +47,9 @@
     },
     "gccbug112766": {
       "oid": "81c1f22e11eb3872df441a78f147345a48a2c047"
+    },
+    "assert": {
+      "oid": "08965af63bb48772203cbae9dc5bb5978aa56f2a"
     }
   }
 }
