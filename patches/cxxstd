@@ -1,0 +1,6 @@
+Bottom: 6d445074ffb644c9dae40c1e44163d89416eeb7b
+Top:    ae26a937bcec65d56c1b3e164b03082a2a147a3e
+Author: scott snyder <sss@karma>
+Date:   2023-05-20 21:05:32 -0400
+
+Don't complain about mismatched c++ standard.
