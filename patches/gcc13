@@ -1,0 +1,6 @@
+Bottom: de5812b6c098a5d605205d4461932b59bc91646b
+Top:    de5812b6c098a5d605205d4461932b59bc91646b
+Author: scott snyder <sss@karma>
+Date:   2024-02-05 17:52:57 -0500
+
+Work around crash seen with gcc13.
