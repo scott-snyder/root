@@ -375,7 +375,8 @@ public:
 
   /// Set that the default argument was inherited from another parameter.
   void setInherited(const ASTContext &C, ParmDecl *InheritedFrom) {
-    assert(!isInherited() && "default argument already inherited");
+    //assert(!isInherited() && "default argument already inherited");
+    if (isInherited()) return;
     InheritedFrom = getParmOwningDefaultArg(InheritedFrom);
     if (!isSet())
       ValueOrInherited = InheritedFrom;
