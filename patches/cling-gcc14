@@ -1,0 +1,6 @@
+Bottom: 0f481b8f76825429edacf3f332a6da5dccbc987f
+Top:    0f481b8f76825429edacf3f332a6da5dccbc987f
+Author: scott snyder <sss@karma>
+Date:   2024-05-21 13:07:44 -0400
+
+Workaround for incompatibility of cling with the gcc14 headers.
