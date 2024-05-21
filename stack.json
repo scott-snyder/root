@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "75cf4daa2f02814f108c91f2decd0894c5176ebf",
-  "head": "659f9ff01770b1b0f916a1102ecae84f10a3c2de",
+  "prev": "92c7bf76ef4a466aed66dddc17bd36e73527005c",
+  "head": "c62fd1e785b599c139c20052dfc59bdf3a4ed7b5",
   "applied": [
     "gitignore",
     "unused-warn",
@@ -15,8 +15,7 @@
     "gccbug112766",
     "assert",
     "gcc13",
-    "cling-gcc14",
-    "refresh-temp"
+    "cling-gcc14"
   ],
   "unapplied": [],
   "hidden": [],
@@ -58,10 +57,7 @@
       "oid": "6d936d4a9607189e0307e4e24f288bfb2c94bf29"
     },
     "cling-gcc14": {
-      "oid": "cc597119f9b4bcc8c9177ece5f75da3655b7d5aa"
-    },
-    "refresh-temp": {
-      "oid": "659f9ff01770b1b0f916a1102ecae84f10a3c2de"
+      "oid": "c62fd1e785b599c139c20052dfc59bdf3a4ed7b5"
     }
   }
 }
