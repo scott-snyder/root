@@ -1,4 +1,4 @@
-# Copyright (C) 1995-2019, Rene Brun and Fons Rademakers.
+# Copyright (C) 1995-2024, Rene Brun and Fons Rademakers.
 # All rights reserved.
 #
 # For the licensing terms see $ROOTSYS/LICENSE.
@@ -673,6 +673,10 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
   foreach(implinc IN LISTS CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES)
     list(APPEND compIncPaths "-compilerI${implinc}")
   endforeach()
+
+if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
+  list(PREPEND compIncPaths "-I/home/sss/root/clang-include-overrides")
+endif()
 
   #---call rootcint------------------------------------------
   add_custom_command(OUTPUT ${dictionary}.cxx ${pcm_name} ${rootmap_name} ${cpp_module_file}
