@@ -1,0 +1,6 @@
+Bottom: 0361c5eac4a75ad8f4c1bfa70b6d671a83b39d65
+Top:    0361c5eac4a75ad8f4c1bfa70b6d671a83b39d65
+Author: scott snyder <sss@karma>
+Date:   2023-12-07 11:19:51 -0500
+
+Fix an assertion failure seen when building root in debug mode.
