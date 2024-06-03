@@ -1,5 +1,5 @@
 /*************************************************************************
- * Copyright (C) 1995-2021, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2024, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -68,7 +68,7 @@ namespace {
 /// much faster than jitting each RLoopManager's code separately.
 std::string &GetCodeToJit()
 {
-   static std::string code;
+   static std::vector<std::string> code;
    return code;
 }
 
@@ -813,14 +813,19 @@ void RLoopManager::Jit()
       }
    }
 
-   const std::string code = []() {
+   const std::vector<std::string> code = []() {
       R__WRITE_LOCKGUARD(ROOT::gCoreMutex);
       return std::move(GetCodeToJit());
    }();
 
    TStopwatch s;
    s.Start();
-   RDFInternal::InterpreterCalc(code, "RLoopManager::Run");
+   for (const std::string& s : code()) {
+     FILE* f = fopen("jit.log", "a");
+     fwrite (s.c_str(), s.size(), 1, f);
+     fclose (f);
+     RDFInternal::InterpreterCalc(s, "RLoopManager::Run");
+   }
    s.Stop();
    R__LOG_INFO(RDFLogChannel()) << "Just-in-time compilation phase completed"
                                 << (s.RealTime() > 1e-3 ? " in " + std::to_string(s.RealTime()) + " seconds."
@@ -985,7 +990,13 @@ void RLoopManager::SetTree(std::shared_ptr<TTree> tree)
 void RLoopManager::ToJitExec(const std::string &code) const
 {
    R__WRITE_LOCKGUARD(ROOT::gCoreMutex);
-   GetCodeToJit().append(code);
+   std::vector<std::string>& v = GetCodeToJit();
+   if (v.empty() || v.back().size() + code.size() > 1000000) {
+     v.push_back (code);
+   }
+   else {
+     v.back().append(code);
+   }
 }
 
 void RLoopManager::RegisterCallback(ULong64_t everyNEvents, std::function<void(unsigned int)> &&f)
