@@ -66,7 +66,7 @@ namespace {
 /// We want RLoopManagers to be able to add their code to a global "code to execute via cling",
 /// so that, lazily, we can jit everything that's needed by all RDFs in one go, which is potentially
 /// much faster than jitting each RLoopManager's code separately.
-std::string &GetCodeToJit()
+std::vector<std::string> &GetCodeToJit()
 {
    static std::vector<std::string> code;
    return code;
@@ -820,7 +820,7 @@ void RLoopManager::Jit()
 
    TStopwatch s;
    s.Start();
-   for (const std::string& s : code()) {
+   for (const std::string& s : code) {
      FILE* f = fopen("jit.log", "a");
      fwrite (s.c_str(), s.size(), 1, f);
      fclose (f);
