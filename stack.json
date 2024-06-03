@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "598edc077b78240ed0945ede2a422dd692b01e58",
-  "head": "5439d88870a4b460d25b75d91f8351bba47f4e82",
+  "prev": "5d1598a9c25b046eb2cc68913709e15881cbeb14",
+  "head": "3fda45c8cec24545f4ef0023c416e1477ab0e2e6",
   "applied": [
     "gitignore",
     "unused-warn",
@@ -12,10 +12,11 @@
     "cnvtmp",
     "cxxstd",
     "libname",
-    "gccbug112766",
+    "gccbug112766"
+  ],
+  "unapplied": [
     "cling-gcc14"
   ],
-  "unapplied": [],
   "hidden": [],
   "patches": {
     "gitignore": {
