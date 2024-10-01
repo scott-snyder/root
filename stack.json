@@ -1,11 +1,12 @@
 {
   "version": 5,
-  "prev": "206ebb4ac03b2bb593e7bc484d154df6ff67f073",
-  "head": "02a760c4a7f86de428f79020e741cdf711715468",
+  "prev": "3dbcdd8602c4f6646d12fd776c076cd5d43ae9cf",
+  "head": "603df1d891c5468ea3eacfddb0c6f0dcdfb2a72b",
   "applied": [
     "gitignore",
     "unused-warn",
-    "th2poly"
+    "th2poly",
+    "jitcrash"
   ],
   "unapplied": [],
   "hidden": [],
@@ -18,6 +19,9 @@
     },
     "th2poly": {
       "oid": "02a760c4a7f86de428f79020e741cdf711715468"
+    },
+    "jitcrash": {
+      "oid": "603df1d891c5468ea3eacfddb0c6f0dcdfb2a72b"
     }
   }
 }
