@@ -1,0 +1,6 @@
+Bottom: 240a5499f9a4140d9150430fc7feb2b2153c791a
+Top:    d1c2305eb4c02453ba045670568c621429b4b0b5
+Author: scott snyder <sss@karma>
+Date:   2023-11-17 12:55:18 -0500
+
+Work around gcc14 bug.
