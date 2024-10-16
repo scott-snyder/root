@@ -1,0 +1,12 @@
+Bottom: d1c2305eb4c02453ba045670568c621429b4b0b5
+Top:    d1c2305eb4c02453ba045670568c621429b4b0b5
+Author: sss <sss@karma>
+Date:   2024-10-16 13:27:56 -0400
+
+Work around cling problem in clang build.
+
+Otherwise, the xAODDataSource/dataFrameTypeConversion test crashes
+in the clang build with cling unable to find the symbol
+
+_ZN4ROOT8Internal3RDF10MeanHelper4ExecISt6vectorIfSaIfEELi0EEEvjRKT_
+void ROOT::Internal::RDF::MeanHelper::Exec<std::vector<float, std::allocator<float> >, 0>(unsigned int, std::vector<float, std::allocator<float> > const&)
