@@ -1,7 +1,7 @@
 // Author: Enrico Guiraud, Danilo Piparo CERN  12/2016
 
 /*************************************************************************
- * Copyright (C) 1995-2018, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2024, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -122,6 +122,19 @@ void MeanHelper::Exec(unsigned int slot, double v)
    fSums[slot] = t;
 }
 
+void MeanHelper::Exec(unsigned int slot, const std::vector<float>& vs)
+{
+  for (auto &&v : vs) {
+
+    fCounts[slot]++;
+    // Kahan Sum:
+    double y = v - fCompensations[slot];
+    double t = fSums[slot] + y;
+    fCompensations[slot] = (t - fSums[slot]) - y;
+    fSums[slot] = t;
+  }
+}
+
 void MeanHelper::Finalize()
 {
    double sumOfSums = 0;
@@ -147,7 +160,7 @@ double &MeanHelper::PartialUpdate(unsigned int slot)
    return fPartialMeans[slot];
 }
 
-template void MeanHelper::Exec(unsigned int, const std::vector<float> &);
+//template void MeanHelper::Exec(unsigned int, const std::vector<float> &);
 template void MeanHelper::Exec(unsigned int, const std::vector<double> &);
 template void MeanHelper::Exec(unsigned int, const std::vector<char> &);
 template void MeanHelper::Exec(unsigned int, const std::vector<int> &);
