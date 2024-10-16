@@ -9,7 +9,7 @@
 */
 
 /*************************************************************************
- * Copyright (C) 1995-2020, Rene Brun and Fons Rademakers.               *
+ * Copyright (C) 1995-2024, Rene Brun and Fons Rademakers.               *
  * All rights reserved.                                                  *
  *                                                                       *
  * For the licensing terms see $ROOTSYS/LICENSE.                         *
@@ -1201,8 +1201,10 @@ public:
    MeanHelper(const MeanHelper &) = delete;
    void InitTask(TTreeReader *, unsigned int) {}
    void Exec(unsigned int slot, double v);
+   void Exec(unsigned int slot, const std::vector<float>& vs);
 
-   template <typename T, std::enable_if_t<IsDataContainer<T>::value, int> = 0>
+   template <typename T>
+     requires IsDataContainer<T>::value
    void Exec(unsigned int slot, const T &vs)
    {
       for (auto &&v : vs) {
@@ -1238,7 +1240,7 @@ public:
    }
 };
 
-extern template void MeanHelper::Exec(unsigned int, const std::vector<float> &);
+//extern template void MeanHelper::Exec(unsigned int, const std::vector<float> &);
 extern template void MeanHelper::Exec(unsigned int, const std::vector<double> &);
 extern template void MeanHelper::Exec(unsigned int, const std::vector<char> &);
 extern template void MeanHelper::Exec(unsigned int, const std::vector<int> &);
